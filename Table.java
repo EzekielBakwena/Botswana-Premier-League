@@ -1,7 +1,7 @@
 //Table.java
 
 public class Table {
-    private matchesPlayed;
+    private int matchesPlayed;
     private int won;
     private int drawn;
     private int lost;

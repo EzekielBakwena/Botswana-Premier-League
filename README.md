@@ -6,17 +6,17 @@
 1st Defining the attributes on each class
 
 Team class private attributes include:
-Team name
-Stadium
-Founded
-Home Town
-rivals
-table
+  Team name
+  Stadium
+  Founded
+  Home Town
+  rivals
+  table
 
 Table class private attributes include:
  Matches played
   Wins
-   Losses
+  Losses
   Draws 
   Points
 
