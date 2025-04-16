@@ -21,7 +21,7 @@ public class Team {
             public String getTeamName() {
                 return teamName;
             }
-              public void setTeamName(String teanName){
+              public void setTeamName(String teamgitName){
                 this.teamName = teamName;
               }
 
