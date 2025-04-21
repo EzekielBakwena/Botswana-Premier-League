@@ -14,19 +14,19 @@
 
 public class Table extends ClubEntity {
     private int matchesPlayed;
-    private int won;
-    private int drawn;
-    private int lost;
-    private int points;
+    private int matchesWon;
+    private int matchesDrawn;
+    private int matchesLost;
+    private int pointsAttained;
 
     // Constructor for the Table class
-    public Table(String clubName, int matchesPlayed, int won, int drawn, int lost, int points) {
+    public Table(String clubName, int matchesPlayed, int matchesWon, int matchesDrawn, int matchesLost, int points) {
         super(clubName);  //Calls the constructor of the parent class (Club Entity)
         this.matchesPlayed = matchesPlayed;
-        this.won = won;
-        this.drawn = drawn;
-        this.lost = lost;
-        this.points = points;
+        this.matchesWon= matchesWon;
+        this.matchesDrawn = matchesDrawn;
+        this.matchesLost = matchesLost;
+        this.pointsAttained = pointsAttained;
     }
 
         //Basic  Getters and Setters
@@ -36,29 +36,29 @@ public class Table extends ClubEntity {
         public void setMatchesPlayed(int matchesPlayed) {
             this.matchesPlayed = matchesPlayed;
         }
-        public int getWon() {
-            return won;
+        public int getMatchesWon() {
+            return matchesWon;
         }
-        public void setWon(int won) {
-            this.won = won;
+        public void setMatchesWon(int matchesWon) {
+            this.matchesWon = matchesWon;
         }
-        public int getDrawn() {
-            return drawn;
+        public int getMatchesDrawn() {
+            return matchesDrawn;
         }
-        public void setDrawn(int drawn) {
-            this.drawn = drawn;
+        public void setMatchesDrawn(int matchesDrawn) {
+            this.matchesDrawn = matchesDrawn;
         }
-        public int getLost() {
-            return lost;
+        public int getMatchesLost() {
+            return matchesLost;
         }
-        public void setLost(int lost) {
-            this.lost = lost;
+        public void setMatchesLost(int lost) {
+            this.matchesLost = matchesLost;
         }
-        public int getPoints() {
-            return points;
+        public int getPointsAttained() {
+            return pointsAttained;
         }
-        public void setPoints(int points) {
-            this.points = points;
+        public void setPointsAttained(int pointsAttained) {
+            this.pointsAttained = pointsAttained;
         }
 
 
