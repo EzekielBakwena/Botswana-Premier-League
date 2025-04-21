@@ -24,4 +24,14 @@ public class ClubEntity{
             System.out.println("Entity name: "+clubName);
         }
 
+        //Getter 
+        public String getClubName(){
+            return clubName;
+        }
+
+        //Setter
+        public void setClubName(String clubName){
+            this.clubName = clubName;
+        }
+
 }
