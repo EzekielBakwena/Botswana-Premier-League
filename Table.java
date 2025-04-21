@@ -20,7 +20,7 @@ public class Table extends ClubEntity {
     private int pointsAttained;
 
     // Constructor for the Table class
-    public Table(String clubName, int matchesPlayed, int matchesWon, int matchesDrawn, int matchesLost, int points) {
+    public Table(String clubName, int matchesPlayed, int matchesWon, int matchesDrawn, int matchesLost, int pointsAttained) {
         super(clubName);  //Calls the constructor of the parent class (Club Entity)
         this.matchesPlayed = matchesPlayed;
         this.matchesWon= matchesWon;
@@ -51,7 +51,7 @@ public class Table extends ClubEntity {
         public int getMatchesLost() {
             return matchesLost;
         }
-        public void setMatchesLost(int lost) {
+        public void setMatchesLost(int matchesLost) {
             this.matchesLost = matchesLost;
         }
         public int getPointsAttained() {

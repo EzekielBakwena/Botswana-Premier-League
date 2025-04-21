@@ -28,13 +28,6 @@ public class Team extends ClubEntity {
             this.rivalTeam = rivalTeam;
         }
             //Getters and Setters for the Team class
-            public String getTeamName() {
-                return teamName;
-            }
-              public void setTeamName(String teamName){
-                this.teamName = teamName;
-              }
-
                 public String getStadiumName() {
                     return stadiumName;
                 }
