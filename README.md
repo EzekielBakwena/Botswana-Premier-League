@@ -8,21 +8,24 @@
 
 
 ** Defining the attributes on each class
- Parent class ClubEntity has a protected attribute named:
+ Parent class ClubEntity has a private attribute named:
  clubName;
 
 
-Team class private attributes include:
-  Stadium
-  Home Town
-  rivals
-  table
+Sub class Team class private attributes :
+  yearFounded;
+  stadiumName;
+  homeTown;
+  rivalTeam;
 
-Table class private attributes include:
-  Matches played
-  Wins
-  Losses
-  Draws 
-  Points
+Sub class Table class has private attributes:
+  matchesPlayed;
+  matchesWon;
+  matchesDrawn;
+  matchesLost;
+  pointsAttained;
 
 ** Adding constructors to both our domain classes
+We added ClubEntity,Team and Table constructors to their respective classes along with the this keyword. to the attributes
+
+**We then added getters and setters for the aforementioned attributes above.
