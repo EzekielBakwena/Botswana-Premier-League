@@ -14,20 +14,18 @@
 
 public class Team extends ClubEntity {
     //Attributes of the team class
-    private String Stadium;
-    private int founded;
+    private String stadiumName;
+    private int yearFounded;
     private String homeTown;
-    private String rivals;
-    private Table table; // Table being the other class in our package
+    private String rivalTeam;
 
         // Constructor for the Team class
-        public Team(String clubName, String Stadium, int founded, String homeTown, String rivals) {
+        public Team(String clubName, String stadiumName, int yearFounded, String homeTown, String rivalTeam) {
             super(clubName);  // Calls the constructor of the parent class.
-            this.Stadium = Stadium;
-            this.founded = founded;
+            this.stadiumName = stadiumName;
+            this.yearFounded = yearFounded;
             this.homeTown = homeTown;
-            this.rivals = rivals;
-            this.table = table;
+            this.rivalTeam = rivalTeam;
         }
             //Getters and Setters for the Team class
             public String getTeamName() {
@@ -37,18 +35,18 @@ public class Team extends ClubEntity {
                 this.teamName = teamName;
               }
 
-                public String getStadium() {
-                    return Stadium;
+                public String getStadiumName() {
+                    return stadiumName;
                 }
-                public void setStadium(String Stadium) {
-                    this.Stadium = Stadium;
+                public void setStadiumName(String stadiumName) {
+                    this.stadiumName = stadiumName;
                 }
-                  public int getFounded() {
-                    return founded;
+                  public int getYearFounded() {
+                    return yearFounded;
                      }
 
-                public void setFounded(int founded) {
-                    this.founded = founded;
+                public void setYearFounded(int yearFounded) {
+                    this.yearFounded = yearFounded;
                 }
 
                 public String getHomeTown() {
@@ -59,20 +57,14 @@ public class Team extends ClubEntity {
                     this.homeTown = homeTown;
                 }
 
-                public String getRivals() {
-                    return rivals;
+                public String getRivalTeam() {
+                    return rivalTeam;
                 }
 
-                public void setRivals(String rivals) {
-                    this.rivals = rivals;
+                public void setRivalTeam(String rivalTeam) {
+                    this.rivalTeam = rivalTeam;
                 }
 
-                public Table getTable() {
-                    return table;
-                }
-                public void setTable(Table table) {
-                    this.table = table;
-                }
    }   
 
 
