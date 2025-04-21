@@ -1,3 +1,15 @@
+/**************************************************************************
+ *Program name: Table.java
+ * @author: Gugu Ketshabe           ID: 202407232 
+ * @author: Lone Mosime             ID: 202401044
+ * @author: Devin Phokoletso        ID: 202402388
+ * @author: Lekgotla Maphorisa      ID: 202400965
+ * @author: Ezekiel Bakwena         ID: 202406103
+ * @version:1.00
+ * Description: A sub class which contains the statistical attributes of the Table class.
+ * How to Compile: javac Table.java
+ * How to run: java  Table
+ ********************************************************************************/
 //Table.java
 
 public class Table extends ClubEntity {
