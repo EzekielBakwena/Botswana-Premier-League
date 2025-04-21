@@ -1,7 +1,7 @@
 //Team.java
 
-public class Team {
-    private String teamName;
+public class Team extends ClubEntity {
+    //Attributes of the team class
     private String Stadium;
     private int founded;
     private String homeTown;
@@ -9,8 +9,8 @@ public class Team {
     private Table table; // Table being the other class in our package
 
         // Constructor for the Team class
-        public Team(String teamName, String Stadium, int founded, String homeTown, String rivals) {
-            this.teamName = teamName;
+        public Team(String clubName, String Stadium, int founded, String homeTown, String rivals) {
+            super(clubName);  // Calls the constructor of the parent class.
             this.Stadium = Stadium;
             this.founded = founded;
             this.homeTown = homeTown;
