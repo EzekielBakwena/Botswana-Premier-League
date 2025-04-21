@@ -1,6 +1,6 @@
 //Table.java
 
-public class Table {
+public class Table extends ClubEntity {
     private int matchesPlayed;
     private int won;
     private int drawn;
@@ -8,7 +8,8 @@ public class Table {
     private int points;
 
     // Constructor for the Table class
-    public Table(int matchesPlayed, int won, int drawn, int lost, int points) {
+    public Table(String clubName, int matchesPlayed, int won, int drawn, int lost, int points) {
+        super(clubName);  //Calls the constructor of the parent class (Club Entity)
         this.matchesPlayed = matchesPlayed;
         this.won = won;
         this.drawn = drawn;
