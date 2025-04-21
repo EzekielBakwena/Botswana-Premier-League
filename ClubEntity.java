@@ -15,17 +15,13 @@
 
 public class ClubEntity{
     protected String clubName;
-    protected int yearFounded;
 
-    public ClubEntity(String clubName, int yearFounded){
+    public ClubEntity(String clubName){
         this.clubName = clubName;
-        this.yearFounded = yearFounded;
     }
 
         public void displayinfo(){
             System.out.println("Entity name: "+clubName);
-            System.out.println("Year founded: "+yearFounded);
-
         }
 
 }
