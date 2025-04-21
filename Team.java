@@ -1,3 +1,15 @@
+/**************************************************************************
+ *Program name: Team.java
+ * @author: Gugu Ketshabe           ID: 202407232 
+ * @author: Lone Mosime             ID: 202401044
+ * @author: Devin Phokoletso        ID: 202402388
+ * @author: Lekgotla Maphorisa      ID: 202400965
+ * @author: Ezekiel Bakwena         ID: 202406103
+ * @version:1.00
+ * Description: A sub class which contains the attributes of a team and its table.
+ * How to Compile: javac Team.java
+ * How to run: java  Team
+ ********************************************************************************/
 //Team.java
 
 public class Team extends ClubEntity {
