@@ -14,7 +14,7 @@
 //Parent class
 
 public class ClubEntity{
-    protected String clubName;
+    private String clubName;
 
     public ClubEntity(String clubName){
         this.clubName = clubName;
