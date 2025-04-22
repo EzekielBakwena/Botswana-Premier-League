@@ -57,7 +57,22 @@ public class Team extends ClubEntity {
                 public void setRivalTeam(String rivalTeam) {
                     this.rivalTeam = rivalTeam;
                 }
+public void insertionSort(teams[] arr){
 
+    for(int i = 1; i < teams.size(); i++){
+
+        Team keyTeam = teams.get(i);
+        int key = keyTeam.getTable().getPointsAttained();
+        int j = i - 1;
+
+        while (j >= 0 && teams.get(j).getTable().getPointsAttained() < key){
+
+            teams.set(j + 1, teams.get(j));
+            j--;
+        }
+        teams.set(j + 1, keyTeam); 
+    }
+}
    }   
 
 
