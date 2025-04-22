@@ -74,6 +74,32 @@ public class Table extends ClubEntity {
         j--;
         }
         table1[j + 1] = key;
+         }
      }
+
+            //Iterative Binary search to find the index of a club with the most points attained
+            public static int binarySearchByPoints(Table[] table1, int pointsAttained){
+                //left and right pointers
+                int left = 0;
+                int right = table1.length - 1;
+
+                while(left<=right){
+                    //initially find the middle index
+                    int mid = (left+right)/2;
+                    int midNumber = table1[mid].getPointsAttained();
+
+                    //if the middle number is equals to points attained, return the index
+                    if(pointsAttained == midNumber){
+                        return mid;
+                    }
+                    else if(pointsAttained < midNumber){
+                        right = mid -1;
+                    }
+                    else{
+                        left = mid + 1;
+                    }
+                }
+                    return -1; //if the club is not found, return -1   
+   
   }
 }
