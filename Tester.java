@@ -33,6 +33,38 @@ public class Tester{
         table1 [4] = new Table ("Jwaneng Galaxy", 10, 3, 5, 2, 14);
 
         
+        //Printing the table details before insertion sort
+        System.out.println("Table details before insertion sort:");
+        for (int i = 0 ; i < table1.length; i++){
+            System.out.println("Club Name: " + table1[i].getClubName() + ", Matches Played: " + table1[i].getMatchesPlayed());
+            System.out.println("Matches Won: " + table1[i].getMatchesWon());
+            System.out.println("Matches Drawn: " + table1[i].getMatchesDrawn());
+            System.out.println("Matches Lost: " + table1[i].getMatchesLost());
+            System.out.println("Points Attained: " + table1[i].getPointsAttained());
+            System.out.println("-------------------------------------------------");
+        }
+
+        //Insertion sort based on points attained
+        Table.sortByPointsAttained(table1);
+
+        //Printing the table details after insertion sort
+        System.out.println("\nTable details after insertion sort:");
+        for (int i = 0 ; i < table1.length; i++){
+            System.out.println("Club Name: " + table1[i].getClubName() + ", Matches Played: " + table1[i].getMatchesPlayed());
+            System.out.println("Matches Won: " + table1[i].getMatchesWon());
+            System.out.println("Matches Drawn: " + table1[i].getMatchesDrawn());
+            System.out.println("Matches Lost: " + table1[i].getMatchesLost());
+            System.out.println("Points Attained: " + table1[i].getPointsAttained());
+        }
+
+        //Binary search to search for the team with the most points attained
+        int pointsToSearch = 14; // Points to search for
+        int index = Table.binarySearchByPoints(table1, pointsToSearch);
+        if (index != -1) {
+            System.out.println("\nTeam with " + pointsToSearch + " points attained: " + index);
+        } else {
+            System.out.println("\nTeam with " + pointsToSearch + " points attained not found.");
+        }
 
 
         
