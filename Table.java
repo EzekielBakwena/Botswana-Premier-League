@@ -60,17 +60,20 @@ public class Table extends ClubEntity {
         public void setPointsAttained(int pointsAttained) {
             this.pointsAttained = pointsAttained;
         }
+        
 
-public static void insertionSort(int[] arr) {
-for (int i = 1; i < arr.length; i++) {
-int key = arr[i];
-int j = i - 1;
-while (j >= 0 && arr[j] > key) {
-arr[j + 1] = arr[j];
-j--;
-}
-arr[j + 1] = key;
-}
-}
+        //Insertion sort to sort descendingly by points attained
+        public static void sortByPointsAttained(Table[] table1) {
+        for (int i = 1; i > table1.length; i++) {
+        Table key = table1[i];
+        int j = i - 1;
 
+        // Compare the points attained of the current element with the previous elements
+        while (j >= 0 && table1[j].getPointsAttained() > key.getPointsAttained()) {
+        table1[j + 1] = table1[j];
+        j--;
+        }
+        table1[j + 1] = key;
+     }
+  }
 }
