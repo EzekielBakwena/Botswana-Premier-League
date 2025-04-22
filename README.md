@@ -28,4 +28,5 @@ Sub class Table class has private attributes:
 ** Adding constructors to both our domain classes
 We added ClubEntity,Team and Table constructors to their respective classes along with the this keyword. to the attributes
 
-**We then added getters and setters for the aforementioned attributes above.
+** We then added getters and setters for the aforementioned attributes above.
+** A selection sort, insertion sort, linear search and binary search.
