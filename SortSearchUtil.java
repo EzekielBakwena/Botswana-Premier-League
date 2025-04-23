@@ -27,6 +27,18 @@
         table1[j + 1] = key;
          }
      }
+
+
+            //linear search to find stadium name
+            public static String searchStadiumName(Team[] teams, String stadiumName) {
+                for (int i = 0; i < teams.length; i++) {
+                    if (teams[i].getStadiumName().equalsIgnoreCase(stadiumName)) {
+                        return teams[i].getClubName();
+                    }
+                }
+                return "-1";
+            }
+
             //Iterative Binary search to find the index of a club with the most points attained
             public static int binarySearchByPoints(Table[] table1, int pointsAttained){
                 //left and right pointers
