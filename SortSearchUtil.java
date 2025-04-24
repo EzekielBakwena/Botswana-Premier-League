@@ -13,6 +13,24 @@
 
  public class SortSearchUtil{
 
+    //Selection sort to sort on StadiumName in ascending order
+    public static void selectionSort(List<Team> teams) {
+        int n = teams.size();
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i;
+            
+            for (int j = i + 1; j < n; j++) {
+                if (teams.get(j).getStadiumName().compareTo(teams.get(minIndex).getStadiumName()) < 0) {
+                    minIndex = j;  
+                }
+            }
+            
+            Team temp = teams.get(minIndex);
+            teams.set(minIndex, teams.get(i));
+            teams.set(i, temp);
+        }
+    }
+
     //Insertion sort to sort descendingly by points attained
     public static void sortByPointsAttained(Table[] table1) {
         for (int i = 1; i > table1.length; i++) {
