@@ -65,7 +65,15 @@ public class Tester{
         } else {
             System.out.println("\nTeam with " + pointsToSearch + " points attained not found.");
         }
-
+        
+        // validate the year field for each team using InvalidYearException.
+        for (Team team : teams) {
+            try {
+                InvalidYearException.validateYear(team.getYearFounded(), team.getName());
+                System.out.println("Team " + team.getName() + " Year founded is: " + team.getYearFounded());
+            } catch (InvalidYearException e) {
+                System.out.println("invalid input found at: " + e.getMessage());
+            }
 
         
     }
