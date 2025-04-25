@@ -6,7 +6,13 @@ public class InvalidYearException extends Exception {
     public static void main(String[] args) {
         try {
             throw new InvalidYearException("Invalid year provided.");
-        
+        }
+        catch (InvalidYearException e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        }
+        finally{
+            System.out.printf("Check for Invalid yearFounded done!");
+        }
     }
     public static void validYear(int year, String teamName) throws InvalidYearException {
         if (year <= 0) {
@@ -14,4 +20,5 @@ public class InvalidYearException extends Exception {
         }
 
     
-}
+    }}
+    
