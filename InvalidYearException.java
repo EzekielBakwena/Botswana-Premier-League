@@ -8,7 +8,10 @@ public class InvalidYearException extends Exception {
             throw new InvalidYearException("Invalid year provided.");
         
     }
-
+    public static void validYear(int year, String teamName) throws InvalidYearException {
+        if (year <= 0) {
+            throw new InvalidYearException("Invalid founding year for " + teamName + ": " + year);
+        }
 
     
 }
