@@ -31,20 +31,20 @@
         }
     }
 
-    //Insertion sort to sort descendingly by points attained
-    public static void sortByPointsAttained(Table[] table1) {
-        for (int i = 1; i > table1.length; i++) {
-        Table key = table1[i];
-        int j = i - 1;
+            //Insertion sort to sort descendingly by points attained
+            public static void sortByPointsAttained(Table[] table1) {
+                for (int i = 1; i < table1.length; i++) {
+                Table key = table1[i];
+                int j = i - 1;
 
-        // Compare the points attained of the current element with the previous elements
-        while (j >= 0 && table1[j].getPointsAttained() > key.getPointsAttained()) {
-        table1[j + 1] = table1[j];
-        j--;
-        }
-        table1[j + 1] = key;
-         }
-     }
+                // Compare the points attained of the current element with the previous elements
+                while (j >= 0 && table1[j].getPointsAttained() < key.getPointsAttained()) {
+                table1[j + 1] = table1[j];
+                j = j - 1;
+                }
+                table1[j + 1] = key;
+                }
+            }
 
 
             //linear search to find stadium name
@@ -72,7 +72,7 @@
                     if(pointsAttained == midNumber){
                         return mid;
                     }
-                    else if(pointsAttained < midNumber){
+                    else if(pointsAttained > midNumber){
                         right = mid -1;
                     }
                     else{

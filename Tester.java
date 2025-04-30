@@ -25,70 +25,64 @@ public class Tester {
 
         // Table array declaration and objects
         Table[] table1 = new Table[5];
-        table1[0] = new Table("Township Rollers", 10, 8, 2, 0, 26);
-        table1[1] = new Table("Gaborone United", 10, 6, 2, 2, 20);
-        table1[2] = new Table("Masitaoka FC", 10, 5, 3, 2, 18);
-        table1[3] = new Table("BDF XI", 10, 4, 4, 2, 16);
-        table1[4] = new Table("Jwaneng Galaxy", 10, 3, 5, 2, 14);
+        table1[0] = new Table("Masitaoka FC", 10, 5, 3, 2, 18);
+        table1[1] = new Table("BDF XI", 10, 4, 4, 2, 16);
+        table1[2] = new Table("Township Rollers", 10, 8, 2, 0, 26);
+        table1[3] = new Table("Jwaneng Galaxy", 10, 3, 5, 2, 14);
+        table1[4] = new Table("Gaborone United", 10, 6, 2, 2, 20);
+
 
         // Printing table details before sort
-        System.out.println("Table details before insertion sort:");
+        System.out.println("\n**Table details before insertion sort:**");
         for (Table t : table1) {
             System.out.println("Club Name: " + t.getClubName() + ", Points: " + t.getPointsAttained());
         }
 
         // Sort insertion
-        sortByPointsAttained(table1);
+        SortSearchUtil.sortByPointsAttained(table1);
 
         // Printing table details after sort
-        System.out.println("\nTable details after insertion sort:");
+        System.out.println("\n**Table details after insertion sort:**");
         for (Table t : table1) {
             System.out.println("Club Name: " + t.getClubName() + ", Points: " + t.getPointsAttained());
         }
 
+
         //Binary search to search for the team with the most points attained
         int pointsToSearch = 14;
-        int index = binarySearchByPoints(table1, pointsToSearch);
+        int index = SortSearchUtil.binarySearchByPoints(table1, pointsToSearch);
         if (index != -1) {
             System.out.println("\nTeam with " + pointsToSearch + " points attained: " + table1[index].getClubName());
         } else {
             System.out.println("\nTeam with " + pointsToSearch + " points attained not found.");
         }
 
+        //Selection sort to sort on stadium name in ascending order
+        SortSearchUtil.selectionSort(teams);
+
+        //for loop to print the sorted teams by stadium name
+        System.out.println("\n**Teams sorted by selection sort (stadium name):**");
+        for (Team team : teams) {
+            System.out.println("Club Name: " + team.getClubName() + ", Stadium Name: " + team.getStadiumName());
+        }
+
+        //Linear search to search for the team with the stadium name "Jamali Stadium"
+        String stadiumNameToSearch = "Jamali Stadium";
+        String clubName = SortSearchUtil.searchStadiumName(teams, stadiumNameToSearch);
+        if (!clubName.equals("-1")) {
+            System.out.println("\nClub with stadium name " + stadiumNameToSearch + ": " + clubName);
+        } else {
+            System.out.println("\nClub with stadium name " + stadiumNameToSearch + " not found.");
+        }
+
         // validate the year field for each team using InvalidYearException.
         for (Team team : teams) {
             try {
-                InvalidYearException.validateYear(team.getYearFounded(), team.getTeamName());
-                System.out.println("Team " + team.getTeamName() + " Year founded is: " + team.getYearFounded());
+                InvalidYearException.validateYear(team.getYearFounded(), team.getClubName());
+                System.out.println("Team " + team.getClubName() + " Year founded is: " + team.getYearFounded());
             } catch (InvalidYearException e) {
                 System.out.println("Invalid input found at: " + e.getMessage());
             }
         }
-    }
-
-    // Move method outside of main
-    public static void sortByPointsAttained(Table[] table1) {
-        for (int i = 1; i < table1.length; i++) {
-            Table key = table1[i];
-            int j = i - 1;
-
-            while (j >= 0 && table1[j].getPointsAttained() < key.getPointsAttained()) {
-                table1[j + 1] = table1[j];
-                j--;
-            }
-            table1[j + 1] = key;
-        }
-    }
-
-    public static int binarySearchByPoints(Table[] table, int points) {
-        int left = 0;
-        int right = table.length - 1;
-        while (left <= right) {
-            int mid = (left + right) / 2;
-            if (table[mid].getPointsAttained() == points) return mid;
-            else if (table[mid].getPointsAttained() < points) right = mid - 1;
-            else left = mid + 1;
-        }
-        return -1;
     }
 }
