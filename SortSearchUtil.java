@@ -14,20 +14,20 @@
  public class SortSearchUtil{
 
     //Selection sort to sort on StadiumName in ascending order
-    public static void selectionSort(List<Team> teams) {
-        int n = teams.size();
+    public static void selectionSort(Team[] teams) {
+        int n = teams.length;
         for (int i = 0; i < n - 1; i++) {
             int minIndex = i;
             
             for (int j = i + 1; j < n; j++) {
-                if (teams.get(j).getStadiumName().compareTo(teams.get(minIndex).getStadiumName()) < 0) {
-                    minIndex = j;  
+                if (teams[j].getStadiumName().compareTo(teams[minIndex].getStadiumName()) < 0) {
+                    minIndex = j;
                 }
             }
-            
-            Team temp = teams.get(minIndex);
-            teams.set(minIndex, teams.get(i));
-            teams.set(i, temp);
+            // Swap the found minimum element with the first element
+            Team temp = teams[i];
+            teams [i] = teams[minIndex];
+            teams[minIndex] = temp;
         }
     }
 
