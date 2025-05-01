@@ -70,16 +70,18 @@ public class Tester {
         String stadiumNameToSearch = "Jamali Stadium";
         String clubName = SortSearchUtil.searchStadiumName(teams, stadiumNameToSearch);
         if (!clubName.equals("-1")) {
+            System.out.println("\n linear Search demo");
             System.out.println("\nClub with stadium name " + stadiumNameToSearch + ": " + clubName);
         } else {
             System.out.println("\nClub with stadium name " + stadiumNameToSearch + " not found.");
         }
 
         // validate the year field for each team using InvalidYearException.
+        System.err.println("\nValidating year founded for each team using InvalidYearException:");
         for (Team team : teams) {
             try {
                 InvalidYearException.validateYear(team.getYearFounded(), team.getClubName());
-                System.out.println("Team " + team.getClubName() + " Year founded is: " + team.getYearFounded());
+                System.out.println("\nTeam " + team.getClubName() + " Year founded is: " + team.getYearFounded());
             } catch (InvalidYearException e) {
                 System.out.println("Invalid input found at: " + e.getMessage());
             }
